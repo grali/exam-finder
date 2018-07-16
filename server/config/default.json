@@ -3,8 +3,32 @@
   "port": 3030,
   "public": "../public/",
   "paginate": {
-    "default": 10,
-    "max": 50
+    "default": 1000,
+    "max": 10000
+  },
+  "authentication": {
+    "secret": "6ca6196be64e09320c6c5ba06302751856b93388f2ab625ea64ceb08dfde33f80de95348ab245e62ca12e402e29f979e037127ad7fbf236e402312b8c10c1b14dd73dd3d659ccf9b8d7c33029e99f18b3c196d1872369679405848eb4c44ba6b0d4143bd869d815bec7a9a2f1838fd5fb69be9d2e8f65a4a56e1041367abad3304e3250dc70ee91c945752d144d12b9305a13fa4b5fdf232d369e51d63fafc81d41a2e7f58106010bb9aeafa1f9d7a64746c666064913317fa048cd47fd1469450a30f25f0b5c7ca20daeb1dc15ce794f9292d86f0d85056c5355b144d12dca99e629f23372094855754f9893416bc04d5314a1d3c10613882013dea69d46dbe",
+    "strategies": [
+      "jwt",
+      "local"
+    ],
+    "path": "/authentication",
+    "service": "users",
+    "jwt": {
+      "header": {
+        "typ": "access"
+      },
+      "audience": "https://exam-finder.now.sh",
+      "subject": "auth",
+      "issuer": "exam",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    },
+    "local": {
+      "entity": "user",
+      "usernameField": "email",
+      "passwordField": "password"
+    }
   },
   "mongodb": "mongodb://localhost:27017/exam_finder"
 }

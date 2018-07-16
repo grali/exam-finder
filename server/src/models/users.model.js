@@ -1,15 +1,16 @@
-// exams-model.js - A mongoose model
-// 
+// users-model.js - A mongoose model
+//
 // See http://mongoosejs.com/docs/models.html
 // for more of what you can do here.
 module.exports = function (app) {
   const mongooseClient = app.get('mongooseClient');
-  const { Schema } = mongooseClient;
-  const exams = new Schema({
-    text: { type: String, required: true }
+  const users = new mongooseClient.Schema({
+
+    email: {type: String, unique: true},
+    password: { type: String }
   }, {
     timestamps: true
   });
 
-  return mongooseClient.model('exams', exams);
+  return mongooseClient.model('users', users);
 };
