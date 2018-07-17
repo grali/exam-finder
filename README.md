@@ -1,6 +1,7 @@
 # exam-finder
 
+# WIP
 
 * [x] Make server 
-* [ ] Make the frontend 
+* [x] Make the frontend 
 * [x] Choose the Design (almost done)
