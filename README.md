@@ -4,4 +4,4 @@
 
 * [x] Make server 
 * [x] Make the frontend 
-* [x] Choose the Design (almost done)
+* [x] Choose the Design
