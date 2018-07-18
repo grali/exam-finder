@@ -1,18 +1,32 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './index.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div className="container">
+        <nav>
+          <input type="text" placeholder="Search for exams" />
+          <span>LOGO</span>
+          <a>LOGIN/REGISTER</a>
+        </nav>
+        <div className="add-note">
+          CREATE A NOTE:
+          <input id="add-note" type="text" placeholder="New note..." />
+          <button type="button">Add note</button>
+        </div>
+        <div className="featured-notes">
+          FEATURED NOTES:
+          <ul>
+            <li>Example note 1</li>
+            <li>Example note 2</li>
+            <li>Example note 3</li>
+          </ul>
+        </div>
+        <div className="my-notes">
+          My notes:
+
+        </div>
       </div>
     );
   }
