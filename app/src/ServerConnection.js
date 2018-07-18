@@ -1,7 +1,7 @@
 import io from 'socket.io-client'
 import feathers from '@feathersjs/client'
 
-const socket = io('http://localhost:3030')
+const socket = io('http://d6ad13bb.ngrok.io/')
 const server = feathers()
 
 server.configure(feathers.socketio(socket))
